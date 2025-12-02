@@ -395,8 +395,8 @@ git commit -m "Update mmsegmentation to latest version"
 ---
 
 **相关文档**:
-- [Git 高级用法](../notes/03_git_advanced.md) - 版本回溯、特殊情况处理等
-- [故障排查指南](../notes/04_troubleshooting.md) - 常见问题解决方案
+- [Git 高级用法](../notes/04_git_advanced.md) - 版本回溯、特殊情况处理等
+- [故障排查指南](../notes/05_troubleshooting.md) - 常见问题解决方案
 
 **最后更新**: 2024-12-02
 

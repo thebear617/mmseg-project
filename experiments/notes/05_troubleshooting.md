@@ -262,9 +262,9 @@ python -c "from custom.models import *; print('导入成功！')"
 ---
 
 **相关文档**:
-- [环境设置指南](../notes/01_environment_setup.md)
-- [Git 基础工作流程](../notes/02_git_basics.md)
-- [Git 高级用法](../notes/03_git_advanced.md)
+- [环境设置指南](../notes/02_environment_setup.md)
+- [Git 基础工作流程](../notes/03_git_basics.md)
+- [Git 高级用法](../notes/04_git_advanced.md)
 
 **最后更新**: 2024-12-02
 

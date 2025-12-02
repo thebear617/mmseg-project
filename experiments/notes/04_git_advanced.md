@@ -398,8 +398,8 @@ rsync -av experiments/work_dirs/exp_001/ user@server:/backup/exp_001/
 ---
 
 **相关文档**:
-- [Git 基础工作流程](../notes/02_git_basics.md) - 日常使用流程
-- [故障排查指南](../notes/04_troubleshooting.md) - 常见问题解决方案
+- [Git 基础工作流程](../notes/03_git_basics.md) - 日常使用流程
+- [故障排查指南](../notes/05_troubleshooting.md) - 常见问题解决方案
 
 **最后更新**: 2024-12-02
 

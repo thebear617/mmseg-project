@@ -24,7 +24,22 @@
 
 ---
 
-### 01_environment_setup.md - 环境设置指南
+### 01_how_to_maintain_context.md - Agent上下文维护指南（AI参考）
+**适用场景**: AI维护Agent上下文时的参考文档
+
+**包含内容**:
+- 新Agent启动时的操作流程
+- Agent完成修改后的更新规范
+- 更新模式选择（追加 vs 生成）
+- 标准提示词模板
+
+**何时查阅**: 
+- AI需要更新AGENT_CONTEXT.md时
+- 新Agent启动时了解上下文维护机制
+
+---
+
+### 02_environment_setup.md - 环境设置指南
 **适用场景**: 项目初始设置、环境配置
 
 **包含内容**:
@@ -39,7 +54,7 @@
 
 ---
 
-### 02_git_basics.md - Git 基础工作流程
+### 03_git_basics.md - Git 基础工作流程
 **适用场景**: 日常开发、版本控制
 
 **包含内容**:
@@ -55,7 +70,7 @@
 
 ---
 
-### 03_git_advanced.md - Git 高级用法
+### 04_git_advanced.md - Git 高级用法
 **适用场景**: 遇到问题、需要高级功能时
 
 **包含内容**:
@@ -71,7 +86,7 @@
 
 ---
 
-### 04_troubleshooting.md - 故障排查指南
+### 05_troubleshooting.md - 故障排查指南
 **适用场景**: 遇到问题时快速查找解决方案
 
 **包含内容**:
@@ -91,27 +106,27 @@
 ### 按使用频率
 
 1. **日常使用**（每天）:
-   - `02_git_basics.md` - Git 基础工作流程
+   - `03_git_basics.md` - Git 基础工作流程
 
 2. **按需查阅**（遇到问题时）:
-   - `04_troubleshooting.md` - 故障排查指南
-   - `03_git_advanced.md` - Git 高级用法
+   - `05_troubleshooting.md` - 故障排查指南
+   - `04_git_advanced.md` - Git 高级用法
 
 3. **初始设置**（项目开始时）:
-   - `01_environment_setup.md` - 环境设置指南
+   - `02_environment_setup.md` - 环境设置指南
 
 ### 按学习阶段
 
 - **新手阶段**: 
-  - 先看 `01_environment_setup.md` 设置环境
-  - 再看 `02_git_basics.md` 学习基础操作
+  - 先看 `02_environment_setup.md` 设置环境
+  - 再看 `03_git_basics.md` 学习基础操作
 
 - **熟练阶段**: 
-  - 主要使用 `02_git_basics.md` 作为日常参考
-  - 遇到问题时查阅 `04_troubleshooting.md`
+  - 主要使用 `03_git_basics.md` 作为日常参考
+  - 遇到问题时查阅 `05_troubleshooting.md`
 
 - **高级阶段**: 
-  - 深入学习 `03_git_advanced.md`
+  - 深入学习 `04_git_advanced.md`
   - 掌握版本回溯、分支管理等高级功能
 
 ---
@@ -122,13 +137,14 @@
 
 | 需求 | 查看文件 |
 |------|---------|
-| 设置 PYTHONPATH | `01_environment_setup.md` |
-| 创建软链接 | `01_environment_setup.md` |
-| 提交代码 | `02_git_basics.md` |
-| 回退版本 | `03_git_advanced.md` |
-| 解决错误 | `04_troubleshooting.md` |
-| 学习 Git 基础 | `02_git_basics.md` |
-| 学习 Git 高级 | `03_git_advanced.md` |
+| 设置 PYTHONPATH | `02_environment_setup.md` |
+| 创建软链接 | `02_environment_setup.md` |
+| 提交代码 | `03_git_basics.md` |
+| 回退版本 | `04_git_advanced.md` |
+| 解决错误 | `05_troubleshooting.md` |
+| 学习 Git 基础 | `03_git_basics.md` |
+| 学习 Git 高级 | `04_git_advanced.md` |
+| 维护Agent上下文 | `01_how_to_maintain_context.md` |
 
 ---
 
@@ -143,10 +159,11 @@
 ### 文件组织原则
 
 - **00_how_to_add_notes.md**: AI参考文档（笔记添加规则和流程）
-- **01_environment_setup.md**: 环境相关的基础设置
-- **02_git_basics.md**: Git 日常使用的基础操作
-- **03_git_advanced.md**: Git 高级功能和特殊场景
-- **04_troubleshooting.md**: 问题解决方案的汇总
+- **01_how_to_maintain_context.md**: AI参考文档（Agent上下文维护指南）
+- **02_environment_setup.md**: 环境相关的基础设置
+- **03_git_basics.md**: Git 日常使用的基础操作
+- **04_git_advanced.md**: Git 高级功能和特殊场景
+- **05_troubleshooting.md**: 问题解决方案的汇总
 
 ---
 

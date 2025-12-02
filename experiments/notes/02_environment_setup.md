@@ -315,8 +315,8 @@ train_dataloader = dict(
 ---
 
 **相关文档**:
-- [Git 基础工作流程](../notes/02_git_basics.md)
-- [故障排查指南](../notes/04_troubleshooting.md)
+- [Git 基础工作流程](../notes/03_git_basics.md)
+- [故障排查指南](../notes/05_troubleshooting.md)
 
 **最后更新**: 2024-12-02
 

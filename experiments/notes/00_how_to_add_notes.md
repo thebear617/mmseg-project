@@ -1,6 +1,10 @@
 # 笔记添加指南（AI参考文档）
 
-> 本文档为AI提供添加新笔记的标准流程、文件分类规则和操作规范。当用户要求添加笔记时，请参考本文档执行。
+> **重要说明**: 本文档为AI提供添加新笔记的标准流程、文件分类规则和操作规范。
+> 
+> **使用要求**: 当用户要求添加笔记时，AI必须首先读取本文档（`experiments/notes/00_how_to_add_notes.md`），了解文件分类规则和操作规范，然后按照规则执行操作。
+> 
+> **工作原理**: AI不会自动读取文件，必须在提示词中明确要求，或AI主动判断需要时才会读取。因此，所有提示词模板都包含"参考本文档"的要求。
 
 ---
 
@@ -19,14 +23,15 @@
 - 环境相关 / Git基础 / Git高级 / 故障排查 / 其他
 
 请按照以下要求操作：
-1. 自动识别应该添加到哪个md文件（根据内容主题匹配现有文件）
-2. 如果现有文件没有匹配的主题，创建新文件（命名格式：05_主题名.md，按序号递增）
-3. 确保文件大小合理（单个文件不超过500行，如果添加后超过则考虑拆分或精简）
-4. 自动更新 README.md：
+1. 首先读取 experiments/notes/00_how_to_add_notes.md，了解文件分类匹配规则、文件大小控制标准和README更新规则
+2. 根据规则自动识别应该添加到哪个md文件（根据内容主题匹配现有文件）
+3. 如果现有文件没有匹配的主题，创建新文件（命名格式：05_主题名.md，按序号递增）
+4. 确保文件大小合理（单个文件不超过500行，如果添加后超过则考虑拆分或精简）
+5. 自动更新 README.md：
    - 如果新建文件，添加完整索引（标题、适用场景、包含内容、何时查阅）
    - 如果更新现有文件，更新对应的"包含内容"列表
    - 更新"快速查找"表格（如需要）
-5. 保持文件内部目录结构清晰，章节编号连续
+6. 保持文件内部目录结构清晰，章节编号连续
 ```
 
 ### 模板 2: 简化版（日常使用）
@@ -39,10 +44,13 @@
 分类：[环境/Git基础/Git高级/故障排查/其他]
 
 要求：
+- 参考 experiments/notes/00_how_to_add_notes.md 中的规则
 - 自动识别匹配的文件或新建
 - 控制文件大小（<500行）
 - 更新 README.md
 ```
+
+**注意**: 此模板明确要求AI读取规则文件，确保AI按照标准流程操作。
 
 ---
 
@@ -50,10 +58,10 @@
 
 | 内容主题关键词 | 匹配文件 | 文件编号 | 示例内容 |
 |--------------|---------|---------|---------|
-| **环境变量、PYTHONPATH、软链接、conda、venv、系统配置、环境设置、路径配置** | `01_environment_setup.md` | 01 | "如何设置PYTHONPATH"、"conda环境管理" |
-| **Git日常操作、提交流程、基本命令、工作流程、git add、git commit、git push、版本控制基础** | `02_git_basics.md` | 02 | "如何提交代码"、"Git工作流程" |
-| **版本回溯、分支管理、Git LFS、高级功能、git reset、git rebase、git merge、撤销提交** | `03_git_advanced.md` | 03 | "如何回退版本"、"分支合并策略" |
-| **错误解决、故障排查、常见问题、快速参考、问题解决、错误处理、调试** | `04_troubleshooting.md` | 04 | "遇到XXX错误怎么办"、"问题排查" |
+| **环境变量、PYTHONPATH、软链接、conda、venv、系统配置、环境设置、路径配置** | `02_environment_setup.md` | 02 | "如何设置PYTHONPATH"、"conda环境管理" |
+| **Git日常操作、提交流程、基本命令、工作流程、git add、git commit、git push、版本控制基础** | `03_git_basics.md` | 03 | "如何提交代码"、"Git工作流程" |
+| **版本回溯、分支管理、Git LFS、高级功能、git reset、git rebase、git merge、撤销提交** | `04_git_advanced.md` | 04 | "如何回退版本"、"分支合并策略" |
+| **错误解决、故障排查、常见问题、快速参考、问题解决、错误处理、调试** | `05_troubleshooting.md` | 05 | "遇到XXX错误怎么办"、"问题排查" |
 | **Python技巧、代码优化、编程技巧** | `05_python_tips.md` | 05 | Python相关技巧（新建） |
 | **Docker、容器化、部署** | `05_docker_deployment.md` | 05 | Docker相关（新建） |
 | **深度学习、模型训练、数据处理、可视化** | `06_deep_learning.md` | 06 | 深度学习相关（新建） |
@@ -183,8 +191,9 @@ wc -l experiments/notes/目标文件.md
 
 添加笔记时，AI应完成以下检查：
 
-- [ ] **文件识别**: 正确识别应该添加到哪个文件（或创建新文件）
-- [ ] **大小控制**: 检查文件大小，确保不超过500行
+- [ ] **读取规则文件**: 首先读取 `experiments/notes/00_how_to_add_notes.md`，了解所有规则
+- [ ] **文件识别**: 根据规则表中的关键词匹配，正确识别应该添加到哪个文件（或创建新文件）
+- [ ] **大小控制**: 检查文件大小（使用 `wc -l`），确保不超过500行
 - [ ] **内容组织**: 章节编号连续，目录结构清晰
 - [ ] **README更新**: 
   - 新建文件：添加完整索引和快速查找条目
@@ -232,10 +241,11 @@ wc -l experiments/notes/目标文件.md
 | 文件 | 行数 | 状态 |
 |------|------|------|
 | `00_how_to_add_notes.md` | ~ | 本文件（AI参考） |
-| `01_environment_setup.md` | ~322 | ✅ 正常 |
-| `02_git_basics.md` | ~402 | ✅ 正常 |
-| `03_git_advanced.md` | ~405 | ⚠️ 接近上限 |
-| `04_troubleshooting.md` | ~270 | ✅ 正常 |
+| `01_how_to_maintain_context.md` | ~ | AI参考文档 |
+| `02_environment_setup.md` | ~322 | ✅ 正常 |
+| `03_git_basics.md` | ~402 | ✅ 正常 |
+| `04_git_advanced.md` | ~405 | ⚠️ 接近上限 |
+| `05_troubleshooting.md` | ~270 | ✅ 正常 |
 | `README.md` | ~144 | ✅ 正常 |
 
 **注意**: 当文件接近500行时，添加新内容前优先考虑拆分或精简。
@@ -248,45 +258,63 @@ wc -l experiments/notes/目标文件.md
 
 **用户输入**:
 ```
-添加笔记：
+添加笔记到 experiments/notes/：
+
 标题：conda环境导出和导入
 内容：conda env export > environment.yml 和 conda env create -f environment.yml
 分类：环境设置
+
+要求：
+- 参考 experiments/notes/00_how_to_add_notes.md 中的规则
+- 自动识别匹配的文件或新建
+- 控制文件大小（<500行）
+- 更新 README.md
 ```
 
-**AI操作**:
-1. 识别：环境相关 → `01_environment_setup.md`
-2. 检查大小：当前322行，添加后约340行 → ✅ 可以添加
-3. 添加内容：在"1.3 永久设置方法"下添加新小节
-4. 更新README：在"01_environment_setup.md"的"包含内容"中添加"conda环境导出和导入"
+**AI操作流程**:
+1. **读取规则文件**: 读取 `experiments/notes/00_how_to_add_notes.md`，了解文件分类规则
+2. **识别目标文件**: 根据"环境设置"分类和内容主题，匹配到 `02_environment_setup.md`
+3. **检查文件大小**: 使用 `wc -l` 检查当前322行，添加后约340行 → ✅ 可以添加
+4. **添加内容**: 在"1.3 永久设置方法"下添加新小节，保持章节编号连续
+5. **更新README**: 在"02_environment_setup.md"的"包含内容"中添加"conda环境导出和导入"
 
 ### 示例2: 创建新文件
 
 **用户输入**:
 ```
-添加笔记：
+添加笔记到 experiments/notes/：
+
 标题：Docker容器化部署完整指南
 内容：[200+行的Docker相关内容]
 分类：其他
+
+要求：
+- 参考 experiments/notes/00_how_to_add_notes.md 中的规则
+- 自动识别匹配的文件或新建
+- 控制文件大小（<500行）
+- 更新 README.md
 ```
 
-**AI操作**:
-1. 识别：Docker主题 → 无匹配文件 → 创建新文件
-2. 创建文件：`05_docker_deployment.md`
-3. 检查大小：新文件约200行 → ✅ 正常
-4. 更新README：
-   - 添加文件索引（标题、适用场景、包含内容、何时查阅）
-   - 添加快速查找条目："Docker部署 | `05_docker_deployment.md`"
+**AI操作流程**:
+1. **读取规则文件**: 读取 `experiments/notes/00_how_to_add_notes.md`，了解文件分类和命名规则
+2. **识别目标文件**: Docker主题 → 查看文件分类表 → 无匹配文件 → 需要创建新文件
+3. **确定文件编号**: 查看现有文件编号（01-04），新文件编号为05
+4. **创建文件**: `05_docker_deployment.md`，按照标准格式创建（包含目录、章节等）
+5. **检查大小**: 新文件约200行 → ✅ 正常（在500行限制内）
+6. **更新README**:
+   - 在"📚 文件索引"部分添加文件索引（标题、适用场景、包含内容、何时查阅）
+   - 在"🔍 快速查找"表格中添加条目："Docker部署 | `05_docker_deployment.md`"
 
 ---
 
 ## 🔗 相关文件
 
 - [笔记目录索引](./README.md) - 用户查看的笔记索引
-- [环境设置指南](./01_environment_setup.md)
-- [Git基础工作流程](./02_git_basics.md)
-- [Git高级用法](./03_git_advanced.md)
-- [故障排查指南](./04_troubleshooting.md)
+- [Agent上下文维护指南](./01_how_to_maintain_context.md)
+- [环境设置指南](./02_environment_setup.md)
+- [Git基础工作流程](./03_git_basics.md)
+- [Git高级用法](./04_git_advanced.md)
+- [故障排查指南](./05_troubleshooting.md)
 
 ---
 
