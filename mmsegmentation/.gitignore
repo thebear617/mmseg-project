@@ -1,3 +1,7 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -134,8 +138,3 @@ work_dirs/**
 !work_dirs/**/config.py
 !work_dirs/**/config.yaml
 # !work_dirs/**/meta.json
-
-
-# macOS
-.DS_Store
-**/.DS_Store
