@@ -128,7 +128,7 @@ mmseg/.mim
 # =========================
 
 # Ignore everything under work_dirs by default
-work_dirs/**
+# work_dirs/**
 
 # Keep directory placeholders + short docs
 !work_dirs/**/.gitkeep
@@ -138,3 +138,7 @@ work_dirs/**
 !work_dirs/**/config.py
 !work_dirs/**/config.yaml
 # !work_dirs/**/meta.json
+
+
+
+
