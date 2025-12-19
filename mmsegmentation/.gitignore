@@ -113,8 +113,24 @@ data
 *.pkl
 *.pkl.json
 *.log.json
-work_dirs/
 mmseg/.mim
 
 # Pytorch
 *.pth
+
+
+# =========================
+# MMSeg work_dirs artifacts
+# =========================
+
+# Ignore everything under work_dirs by default
+work_dirs/**
+
+# Keep directory placeholders + short docs
+!work_dirs/**/.gitkeep
+!work_dirs/**/README.md
+
+# (Optional) If you want to keep configs or small metadata inside work_dirs, uncomment:
+!work_dirs/**/config.py
+!work_dirs/**/config.yaml
+# !work_dirs/**/meta.json
